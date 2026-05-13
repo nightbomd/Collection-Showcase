@@ -1,0 +1,53 @@
+:root {
+    --body-bg: radial-gradient(circle at center,
+            #1e1c1c 0%,
+            #000000 55%,
+            #201010 100%);
+    --accent-bg: #DF2323;
+    --sec-accent-bg: linear-gradient(90deg, #FF3B2F, #FF7A18);
+}
+
+body {
+    background: var(--body-bg);
+    color: white;
+    animation: gradient-animation 5s ease infinite;
+}
+
+.main-text {
+    font-size: 10rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, white, rgb(228, 164, 164));
+    font-family: open-sans, sans-serif;
+     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+hr {
+    border: 5px solid var(--accent-bg);
+}
+
+.highlight {
+    background: var(--sec-accent-bg);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.muted-text {
+    color: rgb(255, 223, 163);
+}
+
+#hero-img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* add bg animation */
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+

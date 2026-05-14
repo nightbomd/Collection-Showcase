@@ -1,8 +1,8 @@
 :root {
     --body-bg: radial-gradient(circle at center,
-            #2c2828 0%,
+            #151313 0%,
             #070606 55%,
-            #461414 100%);
+            #2c1414 100%);
     --accent-bg: #DF2323;
     --sec-accent-bg: linear-gradient(90deg, #FF3B2F, #FF7A18);
 }
@@ -14,7 +14,7 @@ body {
 }
 
 .main-text {
-    font-size: 13rem;
+    font-size: 11rem;
     font-weight: bold;
     background: linear-gradient(90deg, white, rgb(228, 164, 164));
     font-family: open-sans, sans-serif;
@@ -55,7 +55,22 @@ hr {
     border-bottom: 2px solid var(--accent-bg);
 }
 .card img {
-    height: 300px;
+    height: 200px
+}
+.carousel-animated {
+    overflow: hidden;
+    width: 100%;
+}
+
+.track {
+    display: flex;
+    gap: 3rem;
+    width: max-content;
+}
+
+.custom-card {
+    min-width: 350px;
+    flex-shrink: 0;
 }
 .btn-primary {
     background: var(--body-bg) !important;

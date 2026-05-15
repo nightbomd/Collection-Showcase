@@ -22,14 +22,17 @@ const track = document.querySelector(".track");
 
 track.innerHTML += track.innerHTML;
 
- let x = 0;
-    const speed = 1;
+let x = 0;
+const speed = 3;
+
 function animateCarousel() {
+
     x -= speed;
-    if (Math.abs(x) > track.scrollWidth / 2) {
+    if (Math.abs(x) > track.scrollWidth / 2.3) {
         x = 0;
     }
     track.style.transform = `translateX(${x}px)`;
+   
     requestAnimationFrame(animateCarousel);
 }
 

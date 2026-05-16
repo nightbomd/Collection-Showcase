@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
                         ${card.rarity.toUpperCase()}
                     </span>
                 </div>
-                <p class="p-2">${card.desc}</p>
             </div>
         `;
 

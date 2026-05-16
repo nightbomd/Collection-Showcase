@@ -65,4 +65,28 @@ export const cards = [
             agility: 6
         }
     },
+       {
+        title: "duck guy idk",
+        rarity: "rare",
+        image: 'duck.png',
+        desc: "idk bro",
+        attributes: {
+            strength: 10,
+            intelligence: 8,
+            agility: 6
+        }
+    },
+
+        {
+        title: "Banana Guy",
+        rarity: "epic",
+        image: 'banana guy.png',
+        desc: "idk bro",
+        attributes: {
+            strength: 10,
+            intelligence: 8,
+            agility: 6
+        }
+    },
+    
 ]

@@ -166,5 +166,58 @@ drawStars()
 const dots = document.querySelectorAll(".dot")
 
 function animateSelectionBar() {
-    const images = ["thibg.png", "heroimg2.png", "heroimg3.png"]
+    const images = ["thibg.png", "heroimg2.png", "heroimg3.png"];
+    const heroImg = document.getElementById("hero-img");
+    const dots = document.querySelectorAll(".dot");
+
+    let index = 0;
+    let isAnimating = false;
+
+    function updateDots(i) {
+        dots.forEach(d => d.classList.remove("active"));
+        dots[i].classList.add("active");
+    }
+
+    function changeSlide(i) {
+        if (isAnimating) return;
+        isAnimating = true;
+
+        // OUT animation (current image leaves left)
+        heroImg.classList.add("slide-out-left");
+
+        setTimeout(() => {
+            // change image mid-animation
+            heroImg.src = images[i];
+
+            // reset position to right instantly
+            heroImg.classList.remove("slide-out-left");
+            heroImg.classList.add("slide-in-right");
+
+            updateDots(i);
+
+            // force reflow so transition triggers
+            void heroImg.offsetWidth;
+
+            // IN animation (comes from right)
+            heroImg.classList.remove("slide-in-right");
+
+            setTimeout(() => {
+                isAnimating = false;
+            }, 500);
+        }, 250); // half of animation timing
+    }
+
+    dots.forEach((dot, i) => {
+        dot.addEventListener("click", () => {
+            index = i;
+            changeSlide(index);
+        });
+    });
+
+    setInterval(() => {
+        index = (index + 1) % images.length;
+        changeSlide(index);
+    }, 2500);
 }
+
+animateSelectionBar();

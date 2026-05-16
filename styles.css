@@ -19,12 +19,15 @@ body {
     font-weight: bold;
     background: linear-gradient(90deg, white, rgb(228, 164, 164));
     font-family: open-sans, sans-serif;
-     -webkit-background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-header, .hero {
+
+header,
+.hero {
     height: 80vh;
 }
+
 #canvas {
     position: fixed;
     top: 0;
@@ -33,31 +36,33 @@ header, .hero {
     height: 100%;
     z-index: -1;
 }
+
 hr {
     border: 5px solid var(--accent-bg);
 }
+
 h2 {
     font-size: 4rem;
     font-weight: bold;
 }
+
 .highlight-orange {
     background: var(--sec-accent-bg);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 .highlight-light-red {
-     background: linear-gradient(90deg, white, rgb(228, 164, 164));
-     -webkit-background-clip: text;
+    background: linear-gradient(90deg, white, rgb(228, 164, 164));
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 .muted-text {
     color: rgb(255, 223, 163);
 }
 
-#hero-img {
-    max-width: 100%;
-    height: auto;
-}
+
 .card {
     border: 1px solid var(--accent-bg);
     border-radius: 2rem !important;
@@ -65,14 +70,17 @@ h2 {
     background: var(--body-bg);
     color: white;
 }
+
 .card-title {
     font-size: 2rem;
     font-weight: bold;
-  
+
 }
+
 .card img {
     height: 200px
 }
+
 .carousel-animated {
     overflow: hidden;
     width: 100%;
@@ -88,6 +96,7 @@ h2 {
     min-width: 350px;
     flex-shrink: 0;
 }
+
 .btn-primary {
     background: var(--body-bg) !important;
     border: 2px solid var(--accent-bg) !important;
@@ -95,6 +104,7 @@ h2 {
     transition: 0.15s;
     border-radius: 2rem !important;
 }
+
 .btn-primary:hover {
     color: var(--accent-bg) !important;
     opacity: 0.8;
@@ -104,9 +114,10 @@ h2 {
     border: 3px solid rgb(226, 184, 19);
     box-shadow: 0 0 20px gold;
 }
+
 .rarity-legendary span {
     color: rgb(240, 237, 237);
-    background: 3px  rgb(226, 184, 19);
+    background: 3px rgb(226, 184, 19);
     border-radius: 1rem;
     font-weight: 800;
 }
@@ -115,9 +126,10 @@ h2 {
     border: 3px solid rgb(80, 80, 233);
     box-shadow: 0 0 15px rgb(80, 80, 233);
 }
+
 .rarity-rare span {
     color: rgb(240, 237, 237);
-    background: 3px  rgb(80, 80, 233);
+    background: 3px rgb(80, 80, 233);
     border-radius: 1rem;
     font-weight: 800;
 }
@@ -126,61 +138,86 @@ h2 {
     border: 2px solid gray;
     opacity: 0.9;
 }
+
 .rarity-common span {
     color: rgb(240, 237, 237);
-    background: 3px  gray;
+    background: 3px gray;
     border-radius: 1rem;
     font-weight: 800;
 }
+
 .rarity-epic {
     border: 3px solid purple;
     box-shadow: 0 0 15px purple;
 }
+
 .rarity-epic span {
     color: rgb(240, 237, 237);
-    background: 3px  purple;
+    background: 3px purple;
     border-radius: 1rem;
     font-weight: 800;
 }
+
 .rarity-mythic {
     border: 3px solid rgb(253, 0, 51);
     box-shadow: 0 0 15px crimson;
 }
+
 .rarity-mythic span {
     color: rgb(240, 237, 237);
-    background: 3px  rgb(253, 0, 51);
+    background: 3px rgb(253, 0, 51);
     border-radius: 1rem;
     font-weight: 800;
 }
+
 .selector {
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
 
 .dot {
-  width: 40px;
-  height: 8px;
-  border-radius: 999px;
-  background: #555;
-  opacity: 0.4;
-  transition: 0.3s ease;
+    width: 40px;
+    height: 8px;
+    border-radius: 999px;
+    background: #555;
+    opacity: 0.4;
+    transition: 0.3s ease;
 }
 
 .dot.active {
-  background: white;
-  opacity: 1;
-  transform: scaleX(1.2);
+    background: white;
+    opacity: 1;
+    transform: scaleX(1.2);
 }
+
 /* add bg animation */
 @keyframes gradient-animation {
     0% {
         background-position: 0% 50%;
     }
+
     100% {
         background-position: 100% 50%;
     }
 }
 
+#hero-img {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    height: 400px;
+    width: 600px;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-out-left {
+    opacity: 0;
+    transform: translateX(-40px);
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(40px);
+}

@@ -172,7 +172,7 @@ import { createDraggable } from "https://cdn.jsdelivr.net/npm/animejs/+esm";
 createDraggable(heroImg)
 
 function animateSelectionBar() {
-    const images = ["thibg.png", "heroimg2.png", "heroimg3.png"];
+    const images = ["/images/thibg.png", "/images/heroimg2.png", "/images/heroimg3.png"];
 
     const dots = document.querySelectorAll(".dot");
 

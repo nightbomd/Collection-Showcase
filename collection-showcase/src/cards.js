@@ -2,7 +2,7 @@ export const cards = [
     {
         title: "tung tung tung sahur",
         rarity: "legendary",
-        image: 'tung.png',
+        image: '/images/tung.png',
         desc: "idk bro",
         attributes: {
             strength: 10,
@@ -13,7 +13,7 @@ export const cards = [
     {
         title: "Ballerina Capuccina",
         rarity: "rare",
-        image: 'Ballerina Capuccina.png',
+        image: '/images/Ballerina Capuccina.png',
         desc: "idk bro",
         attributes: {
             strength: 10,
@@ -24,7 +24,7 @@ export const cards = [
     {
         title: "Tralelo Tralala",
         rarity: "epic",
-        image: 'Tralelo Tralala.png',
+        image: '/images/Tralelo Tralala.png',
         desc: "idk bro",
         attributes: {
             strength: 10,
@@ -35,7 +35,7 @@ export const cards = [
     {
         title: "Bombordila Crocodilo",
         rarity: "legendary",
-        image: 'BC.png',
+        image: '/images/BC.png',
         desc: "idk bro",
         attributes: {
             strength: 10,
@@ -46,7 +46,7 @@ export const cards = [
     {
         title: "Capuccino Assasino",
         rarity: "mythic",
-        image: 'Capuccino Assasino.png',
+        image: '/images/Capuccino Assasino.png',
         desc: "idk bro",
         attributes: {
             strength: 10,
@@ -57,7 +57,7 @@ export const cards = [
      {
         title: "Li Li la",
         rarity: "common",
-        image: 'Li Li Li la.png',
+        image: '/images/Li Li Li la.png',
         desc: "idk bro",
         attributes: {
             strength: 10,
@@ -68,7 +68,7 @@ export const cards = [
        {
         title: "duck guy idk",
         rarity: "rare",
-        image: 'duck.png',
+        image: '/images/duck.png',
         desc: "idk bro",
         attributes: {
             strength: 10,
@@ -80,7 +80,7 @@ export const cards = [
         {
         title: "Banana Guy",
         rarity: "epic",
-        image: 'banana guy.png',
+        image: '/images/banana guy.png',
         desc: "idk bro",
         attributes: {
             strength: 10,

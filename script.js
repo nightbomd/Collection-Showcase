@@ -12,9 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     cards.forEach(card => {
         const cardElement = document.createElement("div");
+        
 
         cardElement.innerHTML = `
-            <div class="card custom-card rarity-${card.rarity}">
+            <div class="card custom-card  rarity-${card.rarity}">
                 <img src="${card.image}" />
                 <div class="card-title text-center">
                     <h4 class="p-2">${card.title}</h4>
@@ -29,3 +30,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+const navItems = document.querySelectorAll(".nav-item");
+
+navItems.forEach(item => {
+    item.addEventListener("click", () => {
+        navItems.forEach(i => i.classList.remove("active"));
+        item.classList.add("active");
+    })
+})
+

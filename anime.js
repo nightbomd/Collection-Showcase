@@ -20,23 +20,24 @@ animatedElements.forEach(el => observer.observe(el))
 
 const track = document.querySelector(".track");
 
-track.innerHTML += track.innerHTML;
+window.addEventListener("load", () => {
+    track.innerHTML += track.innerHTML;
 
-let x = 0;
-const speed = 3;
+    const originalWidth = track.scrollWidth / 2;
 
-function animateCarousel() {
+    track.style.setProperty(
+        "--scroll-distance",
+        `-${originalWidth}px`
+    );
+});
 
-    x -= speed;
-    if (Math.abs(x) > track.scrollWidth / 2) {
-        x = 0;
-    }
-    track.style.transform = `translateX(${x}px)`;
-   
-    requestAnimationFrame(animateCarousel);
-}
+track.addEventListener("mouseover", () => {
+    track.style.animationPlayState = "paused";
+});
 
-animateCarousel();
+track.addEventListener("mouseout", () => {
+    track.style.animationPlayState = "running";
+});
 
 // IMPORTANT: THIS ENTIRE CODE SEGMENT WAS TAKEN FROM THE NAME GENERATOR TCA
 // starts here
@@ -68,7 +69,7 @@ spaceCanvas.height = window.innerHeight;
 
 let stars = []
 // create 500 stars with random positions and sizes
-for (let i = 0; i < 500; i++) {
+for (let i = 0; i < 200; i++) { // this line is modified slightly 
     stars.push({
         x: Math.random() * spaceCanvas.width,
         y: Math.random() * spaceCanvas.height,

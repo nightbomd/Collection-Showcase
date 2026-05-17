@@ -1,3 +1,4 @@
+
 const animatedElements = document.querySelectorAll(".fadeInUpAnimate");
 
 // observer just means it only gets added if the screen is currently on the elements
@@ -99,7 +100,7 @@ function animate() {
     // Draw mouse trail
     ctx.fillStyle = `hsl(${(mouse.y / spaceCanvas.height) * 360}, 100%, 50%)`;
     ctx.beginPath();
-   
+
     ctx.arc(mouse.x, mouse.y, 20, 0, Math.PI * 2); // Add circle to the same path
     ctx.strokeStyle = `hsl(${(mouse.y / spaceCanvas.height) * 360}, 100%, 50%)`;
     ctx.shadowColor = `hsl(${(mouse.y / spaceCanvas.height) * 360}, 100%, 50%)`;
@@ -127,7 +128,7 @@ function animate() {
             // reused distance calculation for circular motion
             const radialX = dx / distance;
             const radialY = dy / distance;
-            
+
             // Perpendicular vector for circular motion
             const perpX = -radialY;
             const perpY = radialX;
@@ -164,11 +165,15 @@ animate()
 drawStars()
 // ends here
 
-const dots = document.querySelectorAll(".dot")
+
+const heroImg = document.getElementById("hero-img");
+import { createDraggable } from "https://cdn.jsdelivr.net/npm/animejs/+esm";
+
+createDraggable(heroImg)
 
 function animateSelectionBar() {
     const images = ["thibg.png", "heroimg2.png", "heroimg3.png"];
-    const heroImg = document.getElementById("hero-img");
+
     const dots = document.querySelectorAll(".dot");
 
     let index = 0;

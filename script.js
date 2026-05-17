@@ -1,6 +1,7 @@
 
 import { cards } from "./cards.js";
 
+
 document.addEventListener("DOMContentLoaded", () => {
 
     const track = document.getElementById("track");

@@ -2,79 +2,87 @@
 <html lang="en" data-bs-theme="light">
 
 <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Bootstrap CSS v5.3.8 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-    <link rel="stylesheet" href="/src/styles.css" />
+  <!-- Bootstrap CSS v5.3.8 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/src/styles.css" />
 </head>
 
 <body>
-    <canvas id="canvas"></canvas>
-    <nav class="container d-flex justify-content-between p-5"  id="navbar">
-        <ul class="nav gap-5">
-            <a href="index.html"><li class="nav-item fs-2">Home</li></a>
-            <a href="database.html"><li class="nav-item fs-2">Database</li></a>
-        </ul>
-    </nav>
-    <header class="container mb-5 g-3">
-        <div class="hero d-flex">
-            <div class="col-6">
-                <h1 class="main-text fadeInUpAnimate" id="hero-title">BRAIN-<span class="highlight-orange">ROTS</span>
-                </h1>
-                <hr class="fadeInUpAnimate">
-                <p class="muted-text mb-3 fs-2 fadeInUpAnimate">A collection of the brainots idk</p>
-            </div>
-            <div class="col-6 text-center">
-                <img class="img-fluid fadeInUpAnimate"  id="hero-img" src="/images/thibg.png">
-                <div class="selector">
-                    <div class="dot active"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                </div>
-            </div>
+  <canvas id="canvas"></canvas>
+  <nav class="container d-flex justify-content-between p-5" id="navbar">
+    <ul class="nav gap-5">
+      <a href="index.html">
+        <div class="d-flex gap-2"><img src="/images/home.png" class="img-fluid svg">
+          <li class="nav-item fs-2">Home</li>
         </div>
-    </header>
-    <main class="container-fluid mt-5">
-        <section class="fadeInUpAnimate py-5">
+      </a>
+      <a href="database.html">
+        <div class="d-flex gap-2"><img src="/images/data.png" class="img-fluid svg">
+          <li class="nav-item fs-2">Database</li>
+        </div>
+      </a>
+    </ul>
+  </nav>
+  <header class="container mb-5 g-3">
+    <div class="hero d-flex">
+      <div class="col-6">
+        <h1 class="main-text fadeInUpAnimate" id="hero-title">BRAIN-<span class="highlight-orange">ROTS</span>
+        </h1>
+        <hr class="fadeInUpAnimate">
+        <p class="muted-text mb-3 fs-2 fadeInUpAnimate">A collection of the brainots idk</p>
+      </div>
+      <div class="col-6 text-center">
+        <img class="img-fluid fadeInUpAnimate" id="hero-img" src="/images/thibg.png">
+        <div class="selector">
+          <div class="dot active"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="container-fluid mt-5">
+    <section class="fadeInUpAnimate py-5">
 
-            <h2 class="text-center mb-5 p-3  highlight-light-red">
-                ALL YOUR BRAINROTS IN ONE SPOT!
-            </h2>
+      <h2 class="text-center mb-5 p-3  highlight-light-red">
+        ALL YOUR BRAINROTS IN ONE SPOT!
+      </h2>
 
-            <div class="carousel-animated d-flex container-fluid">
+      <div class="carousel-animated d-flex container-fluid">
 
-                <div class="track " id="track">
+        <div class="track  " id="track">
 
 
-                </div>
+        </div>
 
-            </div>
-            <div class="text-center m-5">
-                <a class="btn btn-primary text-center w-25 mt-5 p-3 fs-1  cta-btn" href="database.html">
-                    View Now
-                </a>
-            </div>
+      </div>
+      <div class="text-center m-5">
+        <a class="btn btn-primary text-center w-25 mt-5 p-3 fs-1  cta-btn" href="database.html">
+          View Now
+        </a>
+      </div>
 
-        </section>
+    </section>
 
-    </main>
-    <footer>
-        <!-- place footer here -->
-    </footer>
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
 
-    <!-- Bootstrap JavaScript Bundle (includes Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-       
-    <script src="/src/animation.js" type="module"></script>
-    <script src="/src/script.js" type="module"></script>
-    <script src="/src/cards.js" type="module"></script>
+  <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+  <script src="/src/animation.js" type="module"></script>
+  <script src="/src/script.js" type="module"></script>
+  <script src="/src/cards.js" type="module"></script>
 </body>
 
 </html>

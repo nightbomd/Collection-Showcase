@@ -165,5 +165,16 @@ export const cards = [
             agility: 6
         }
     },
+            {
+        title: "huh",
+        rarity: "huh",
+        image: '/images/huh.png',
+        desc: "so",
+        attributes: {
+            strength: 10,
+            intelligence: 8,
+            agility: 6
+        }
+    },
     
 ]

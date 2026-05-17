@@ -4,7 +4,8 @@ import { cards } from "./cards.js";
 
 function render(card, container) {
    const cardElement = document.createElement("div");
-    cardElement.innerHTML = `
+   cardElement.classList.add("fadeInUpAnimate");
+   cardElement.innerHTML = `
             <div class="card custom-card  rarity-${card.rarity}">
                 <img src="${card.image}" />
                 <div class="card-title text-center">
@@ -32,13 +33,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
 const renderContainer = document.getElementById("render");
 
 renderContainer.innerHTML = `
   <div class="row col-12 g-4">
-    ${cards.map(card => `
+    ${cards.map(card =>
+       `
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
-        <div class="card custom-card col-12 rarity-${card.rarity}">
+        <div class="card custom-card col-12 rarity-${card.rarity} fadeInUpAnimate">
           <img src="${card.image}" class="card-img-top" />
           <div class="card-body text-center">
             <h5 class="mb-3">${card.title}</h5>
@@ -51,6 +54,9 @@ renderContainer.innerHTML = `
     `).join("")}
   </div>
 `;
+
+
+
 const navItems = document.querySelectorAll(".nav-item");
 
 navItems.forEach(item => {

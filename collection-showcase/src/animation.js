@@ -18,7 +18,7 @@ window.addEventListener("DOMContentLoaded", () => {
           ease: "outQuad"
         });
 
-        observer.unobserve(entry.target);
+        observer.unobserve(entry.target)
       }
     });
   }, { threshold: 0.1 });
@@ -51,6 +51,7 @@ track.addEventListener("mouseout", () => {
 // starts here
 const spaceCanvas = document.getElementById("canvas");
 const ctx = spaceCanvas.getContext("2d");
+
 
 function resizeCanvas() {
     spaceCanvas.width = window.innerWidth;

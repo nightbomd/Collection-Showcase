@@ -22,7 +22,13 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
+.data-text {
+    font-size: 5rem;
+}
+.svg {
+    height: 50px;
+    vertical-align: center;
+}
 header,
 .hero {
     height: 80vh;
@@ -51,7 +57,14 @@ h2 {
     background: none;
     border: none;
 }
+a {
+    text-decoration: none;
+    transition: 0.5s ease;
+    padding: 1rem;
+    border-radius: 1rem;
+   
 
+}
 .nav-item::after {
     content: "";
     position: absolute;
@@ -127,7 +140,9 @@ h2 {
     flex-shrink: 0; 
     flex: 0 0 5em;
     max-height: 350px;
+    transition: 0.15s ease;
 }
+
 .custom-card img {
     width: 67%;
     margin: 0 auto;
@@ -187,6 +202,18 @@ h2 {
 .rarity-epic span {
     color: rgb(240, 237, 237);
     background: 3px purple;
+    border-radius: 1rem;
+    font-weight: 800;
+}
+
+.rarity-huh {
+    border: 3px solid rgb(0, 0, 0);
+    box-shadow: 0 0 7px rgb(0, 0, 0);
+}
+
+.rarity-huh span {
+    color: rgb(0, 0, 0);
+    background: 3px rgb(255, 255, 255);
     border-radius: 1rem;
     font-weight: 800;
 }
@@ -322,10 +349,10 @@ h2 {
 }
 
 /* hover state */
-.cta-btn:hover {
+.cta-btn:hover, .custom-card:hover, a:hover {
     transform: translateY(-4px) scale(1.02);
 
-    border-color: #ff5c5c;
+    border: 3px solid #ff5c5c !important;
 
     box-shadow:
         0 0 12px rgba(255, 0, 0, 0.45),

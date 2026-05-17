@@ -14,19 +14,24 @@
 </head>
 
 <body>
+    
     <nav class="container d-flex justify-content-between p-5" id="navbar">
         <ul class="nav gap-5">
             <a href="index.html">
-                <li class="nav-item fs-2">Home</li>
+                <div class="d-flex gap-2"><img src="/images/home.png" class="img-fluid svg">
+                    <li class="nav-item fs-2">Home</li>
+                </div>
             </a>
             <a href="database.html">
-                <li class="nav-item fs-2">Database</li>
+                <div class="d-flex gap-2"><img src="/images/data.png" class="img-fluid svg">
+                    <li class="nav-item fs-2">Database</li>
+                </div>
             </a>
         </ul>
     </nav>
 
-    <h1 class="main-text fadeInUpAnimate fs-1 text-center" id="hero-title">BRAIN-<span
-            class="highlight-orange">ROTS</span>
+    <h1 class="main-text fadeInUpAnimate text-center data-text" id="hero-title">BRAIN-<span
+            class="highlight-orange data-text">ROTS</span>
     </h1>
 
     <main class="container d-flex flex-column align-items-center p-5" id="render"></main>

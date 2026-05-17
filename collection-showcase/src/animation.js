@@ -1,5 +1,6 @@
 import { animate } from "animejs";
-
+import { createDraggable } from "animejs";
+import { Spring } from "animejs";
 
 
 
@@ -175,6 +176,7 @@ drawStars();
 
 
 const heroImg = document.getElementById("hero-img");
+
 
 
 

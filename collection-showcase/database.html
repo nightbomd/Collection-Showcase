@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    
+    <canvas id="canvas"></canvas>
     <nav class="container d-flex justify-content-between p-5" id="navbar">
         <ul class="nav gap-5">
             <a href="index.html">
@@ -27,12 +27,32 @@
                     <li class="nav-item fs-2">Database</li>
                 </div>
             </a>
+            <a href="about.html">
+                <div class="d-flex gap-2"><img src="/images/huh.png" class="img-fluid svg">
+                    <li class="nav-item fs-2">About</li>
+                </div>
+            </a>
         </ul>
     </nav>
-
-    <h1 class="main-text fadeInUpAnimate text-center data-text" id="hero-title">BRAIN-<span
-            class="highlight-orange data-text">ROTS</span>
-    </h1>
+    <div class="d-flex justify-content-center gap-5">
+        <h1 class="main-text fadeInUpAnimate text-center data-text" id="hero-title">BRAIN-<span
+                class="highlight-orange data-text">ROTS</span>
+        </h1>
+        <div class="filter-rarity">
+            <label for="rarity-select" class="form-label fs-5 highlight-light-red fw-bold">Filter by Rarity:</label>
+            <select id="rarity-select" class="form-select text-center fs-4">
+                <option value="all">All</option>
+                <option value="common">Common</option>
+                <option value="rare">Rare</option>
+                <option value="epic">Epic</option>
+                <option value="legendary">Legendary</option>
+            </select>
+        </div>
+        <div class="filter-keyword">
+            <label for="keyword-input" class="form-label fs-5 highlight-light-red fw-bold">Filter by Keyword:</label>
+            <input type="text" id="keyword-input" class="form-control fs-4" placeholder="Enter keyword" />
+        </div>
+    </div>
 
     <main class="container d-flex flex-column align-items-center p-5" id="render"></main>
 
@@ -47,6 +67,7 @@
     <script src="/src/animation.js" type="module"></script>
     <script src="/src/script.js" type="module"></script>
     <script src="/src/cards.js" type="module"></script>
+    <script src="/src/canvas.js" type="module"></script>
 </body>
 
 </html>

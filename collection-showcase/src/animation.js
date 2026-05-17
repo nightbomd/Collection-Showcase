@@ -1,23 +1,30 @@
+import { animate } from "animejs";
 
-const animatedElements = document.querySelectorAll(".fadeInUpAnimate");
 
-// observer just means it only gets added if the screen is currently on the elements
-const observer = new IntersectionObserver((entries) => {
+
+
+
+window.addEventListener("DOMContentLoaded", () => {
+  const animatedElements = document.querySelectorAll(".fadeInUpAnimate");
+
+  const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.animate([
-                { transform: 'translateY(40px)', opacity: 0 },
-                { transform: 'translateY(0)', opacity: 1 }
-            ], {
-                duration: 500,
-                easing: 'ease-out',
-                fill: 'forwards'
-            });
-        }
-    });
-});
+      if (entry.isIntersecting) {
 
-animatedElements.forEach(el => observer.observe(el))
+        animate(entry.target, {
+          y: [40, 0],
+          opacity: [0, 1],
+          duration: 500,
+          ease: "outQuad"
+        });
+
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  animatedElements.forEach(el => observer.observe(el));
+});
 
 const track = document.querySelector(".track");
 
@@ -94,7 +101,7 @@ function drawStars() {
 }
 const lastPos = { x: mouse.x, y: mouse.y };
 
-function animate() {
+function animateStars() {
     ctx.clearRect(0, 0, spaceCanvas.width, spaceCanvas.height);
 
     // Draw mouse trail
@@ -159,17 +166,16 @@ function animate() {
         ctx.fillRect(star.x, star.y, star.radius, star.radius);
     });
 
-    requestAnimationFrame(animate);
+    requestAnimationFrame(animateStars);
 }
-animate()
-drawStars()
+animateStars();
+drawStars();
 // ends here
 
 
 const heroImg = document.getElementById("hero-img");
-import { createDraggable } from "https://cdn.jsdelivr.net/npm/animejs/+esm";
 
-createDraggable(heroImg)
+
 
 function animateSelectionBar() {
     const images = ["/images/thibg.png", "/images/heroimg2.png", "/images/heroimg3.png"];

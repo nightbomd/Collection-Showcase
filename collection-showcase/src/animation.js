@@ -2,9 +2,6 @@ import { animate } from "animejs";
 import { createDraggable } from "animejs";
 import { Spring } from "animejs";
 
-
-
-
 window.addEventListener("DOMContentLoaded", () => {
   const animatedElements = document.querySelectorAll(".fadeInUpAnimate");
 
@@ -48,15 +45,7 @@ track.addEventListener("mouseout", () => {
     track.style.animationPlayState = "running";
 });
 
-// IMPORTANT: THIS ENTIRE CODE SEGMENT WAS TAKEN FROM THE NAME GENERATOR TCA
-// starts here
-
-
-
 const heroImg = document.getElementById("hero-img");
-
-
-
 
 function animateSelectionBar() {
     const images = ["/images/thibg.png", "/images/heroimg2.png", "/images/heroimg3.png"];

@@ -1,6 +1,7 @@
 
 import { cards } from "./cards.js";
 import { createDraggable } from "animejs"
+import { animate } from "animejs"
 
 
 
@@ -67,7 +68,7 @@ renderContainer.innerHTML = `
 `;
 
 renderContainer.addEventListener("click", (event) => {
- 
+
   const wrapper = event.target.closest("[data-index]");
   if (!wrapper) return;
 
@@ -100,25 +101,25 @@ renderContainer.addEventListener("click", (event) => {
   const img = modal.querySelector("img");
 
   img.addEventListener("click", () => {
-  if (Number(index) !== 0) return;
-  alert("huh");
+    if (Number(index) !== 0) return;
+    alert("huh");
 
-  const lastCard = renderContainer.querySelector(
-    `[data-index="${cards.length - 1}"]`
-  );
+    const lastCard = renderContainer.querySelector(
+      `[data-index="${cards.length - 1}"]`
+    );
 
-  lastCard.innerHTML = `<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@qwertzzfn/video/7632288400342666528" data-video-id="7632288400342666528" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@qwertzzfn" href="https://www.tiktok.com/@qwertzzfn?refer=embed">@qwertzzfn</a> Use this for new sticker old is banned <a title="tungtungtungsahur" target="_blank" href="https://www.tiktok.com/tag/tungtungtungsahur?refer=embed">#tungtungtungsahur</a> <a title="sticker" target="_blank" href="https://www.tiktok.com/tag/sticker?refer=embed">#sticker</a> <a title="fypp" target="_blank" href="https://www.tiktok.com/tag/fypp?refer=embed">#fypp</a> <a title="viral" target="_blank" href="https://www.tiktok.com/tag/viral?refer=embed">#viral</a> <a target="_blank" title="♬ Originalton - ༄⋆°•☁︎Mui_To༄⋆°•☁︎" href="https://www.tiktok.com/music/Originalton-7626004967614090017?refer=embed">♬ Originalton - ༄⋆°•☁︎Mui_To༄⋆°•☁︎</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>`;
-});
+    lastCard.innerHTML = `<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@qwertzzfn/video/7632288400342666528" data-video-id="7632288400342666528" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@qwertzzfn" href="https://www.tiktok.com/@qwertzzfn?refer=embed">@qwertzzfn</a> Use this for new sticker old is banned <a title="tungtungtungsahur" target="_blank" href="https://www.tiktok.com/tag/tungtungtungsahur?refer=embed">#tungtungtungsahur</a> <a title="sticker" target="_blank" href="https://www.tiktok.com/tag/sticker?refer=embed">#sticker</a> <a title="fypp" target="_blank" href="https://www.tiktok.com/tag/fypp?refer=embed">#fypp</a> <a title="viral" target="_blank" href="https://www.tiktok.com/tag/viral?refer=embed">#viral</a> <a target="_blank" title="♬ Originalton - ༄⋆°•☁︎Mui_To༄⋆°•☁︎" href="https://www.tiktok.com/music/Originalton-7626004967614090017?refer=embed">♬ Originalton - ༄⋆°•☁︎Mui_To༄⋆°•☁︎</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>`;
+  });
 
-createDraggable(modal.querySelector(".modal-content"), {
-   container: modal,
-   friction: 0,
-});
+  createDraggable(modal.querySelector(".modal-content"), {
+    container: modal,
+    friction: 0,
+  });
 
   modal.querySelector(".close-button").addEventListener("click", () => {
     modal.remove();
   });
-  
+
   modal.tabIndex = -1;
   modal.focus();
   modal.addEventListener("keydown", (event) => {
@@ -129,12 +130,30 @@ createDraggable(modal.querySelector(".modal-content"), {
 });
 
 
-const navItems = document.querySelectorAll(".nav-item");
+const navItems = document.querySelectorAll(".nav-animate");
 
 navItems.forEach(item => {
-  item.addEventListener("click", () => {
-    navItems.forEach(i => i.classList.remove("active"));
-    item.classList.add("active");
-  })
-})
+  const svg = item.querySelector("img");
+
+  let spinAnimation;
+
+  item.addEventListener("mouseenter", () => {
+    spinAnimation = animate(svg, {
+      rotate: 360,
+      duration: 1000,
+      loop: true,
+      ease: "linear",
+    });
+  });
+
+  item.addEventListener("mouseleave", () => {
+    spinAnimation?.pause();
+
+    animate(svg, {
+      rotate: 0,
+      duration: 400,
+      ease: "outExpo",
+    });
+  });
+});
 

@@ -131,7 +131,7 @@ renderContainer.addEventListener("click", (event) => {
 
 
 const navItems = document.querySelectorAll(".nav-animate");
-
+console.log("nav items:", document.querySelectorAll(".nav-animate").length);
 navItems.forEach(item => {
   const svg = item.querySelector("img");
 

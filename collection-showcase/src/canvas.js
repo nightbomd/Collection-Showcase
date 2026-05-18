@@ -33,7 +33,7 @@ for (let i = 0; i < 50; i++) { // this line is modified slightly
     stars.push({
         x: Math.random() * spaceCanvas.width,
         y: Math.random() * spaceCanvas.height,
-        radius: Math.random() * 100 + 3,
+        radius: Math.random() * 45 + 3,
         speed: Math.random() * 1 + 0.5,
         vx: 0,
         vy: 0

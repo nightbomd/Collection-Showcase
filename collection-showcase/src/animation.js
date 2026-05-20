@@ -48,7 +48,7 @@ track.addEventListener("mouseout", () => {
 const heroImg = document.getElementById("hero-img");
 
 function animateSelectionBar() {
-    const images = ["/images/thibg.png", "/images/heroimg2.png", "/images/heroimg3.png"];
+    const images = ["./images/thibg.png", "./images/heroimg2.png", "./images/heroimg3.png"];
 
     const dots = document.querySelectorAll(".dot");
 

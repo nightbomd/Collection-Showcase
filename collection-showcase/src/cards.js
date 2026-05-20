@@ -1,7 +1,7 @@
 export const cards = [
     {
         title: "tung tung tung sahur",
-        rarity: "legendary",
+        rarity: "divine-intervention",
         image: '/images/tung.png',
         desc: "He gon get u",
         attributes: {
@@ -55,7 +55,7 @@ export const cards = [
         }
     },
      {
-        title: "Li Li la",
+        title: " Lirilì Larilà",
         rarity: "common",
         image: '/images/Li li li la.png',
         desc: "idk bro",
@@ -66,10 +66,10 @@ export const cards = [
         }
     },
        {
-        title: "duck guy idk",
+        title: "Bombombini Guzzini",
         rarity: "rare",
         image: '/images/duck.png',
-        desc: "idk bro",
+        desc: "Think of bombordillo crocodilo but it's basically his baby cousin that's it",
         attributes: {
             strength: 10,
             intelligence: 8,
@@ -78,10 +78,10 @@ export const cards = [
     },
 
         {
-        title: "Banana Guy",
+        title: "Chimpanzini Bananini",
         rarity: "epic",
         image: '/images/banana guy.png',
-        desc: "idk bro",
+        desc: "He walks and runs like this btw. He's completely trappe in the banana, he can't get out",
         attributes: {
             strength: 10,
             intelligence: 32,

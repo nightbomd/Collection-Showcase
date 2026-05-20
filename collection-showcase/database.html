@@ -39,14 +39,23 @@
                 class="highlight-orange data-text">ROTS</span>
         </h1>
         <div class="filter-rarity">
+            
             <label for="rarity-select" class="form-label fs-5 highlight-light-red fw-bold">Filter by Rarity:</label>
-            <select id="rarity-select" class="form-select text-center fs-4">
-                <option value="all">All</option>
-                <option value="common">Common</option>
-                <option value="rare">Rare</option>
-                <option value="epic">Epic</option>
-                <option value="legendary">Legendary</option>
-            </select>
+            <ul id="rarity-select" class="form-select text-center list-unstyled fs-4">
+                <div class="custom-select">
+                    <div class="selected">All</div>
+                    <ul class="options hidden list-unstyled">
+                        <li class="option" data-value="all">All</li>
+                        <li class="option" data-value="common">Common</li>
+                        <li class="option" data-value="rare">Rare</li>
+                        <li class="option" data-value="epic">Epic</li>
+                        <li class="option" data-value="legendary">Legendary</li>
+                        <li class="option" data-value="mythic">Mythic</li>
+                        <li class="option" data-value="huh">huh</li>
+                        <li class="option" data-value="divine-intervention">Divine Intervention</li>
+                    </ul>
+                </div>
+            </ul>
         </div>
         <div class="filter-keyword">
             <label for="keyword-input" class="form-label fs-5 highlight-light-red fw-bold">Filter by Keyword:</label>

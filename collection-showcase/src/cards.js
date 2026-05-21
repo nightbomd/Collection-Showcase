@@ -2,7 +2,7 @@ export const cards = [
     {
         title: "tung tung tung sahur",
         rarity: "divine-intervention",
-        image: './images/tung.png',
+        image: 'images/tung.png',
         desc: "He gon get u",
         attributes: {
             strength: 9999999,
@@ -13,7 +13,7 @@ export const cards = [
     {
         title: "Ballerina Capuccina",
         rarity: "rare",
-        image: './images/Ballerina Capuccina.png',
+        image: 'images/Ballerina Capuccina.png',
         desc: "She's a ballerina who is also a cuppicina so shes a cup.",
         attributes: {
             strength: 12,
@@ -24,7 +24,7 @@ export const cards = [
     {
         title: "Tralelo Tralala",
         rarity: "epic",
-        image: './images/Tralelo Tralala.png',
+        image: 'images/Tralelo Tralala.png',
         desc: "Shark with blue shoes. He flys in the ocean like he has nothing to lose",
         attributes: {
             strength: 23,
@@ -35,7 +35,7 @@ export const cards = [
     {
         title: "Bombordila Crocodilo",
         rarity: "legendary",
-        image: './images/BC.png',
+        image: 'images/BC.png',
         desc: "Airplane crocodile, was in the vietnam war",
         attributes: {
             strength: 48,
@@ -46,7 +46,7 @@ export const cards = [
     {
         title: "Capuccino Assasino",
         rarity: "mythic",
-        image: './images/Capuccino Assasino.png',
+        image: 'images/Capuccino Assasino.png',
         desc: "a Capuccino who is an assasin",
         attributes: {
             strength: 128,
@@ -57,7 +57,7 @@ export const cards = [
      {
         title: " Lirilì Larilà",
         rarity: "common",
-        image: './images/Li li li la.png',
+        image: 'images/Li li li la.png',
         desc: "idk bro",
         attributes: {
             strength: 4,
@@ -68,7 +68,7 @@ export const cards = [
        {
         title: "Bombombini Guzzini",
         rarity: "rare",
-        image: './images/duck.png',
+        image: 'images/duck.png',
         desc: "Think of bombordillo crocodilo but it's basically his baby cousin that's it",
         attributes: {
             strength: 10,
@@ -80,7 +80,7 @@ export const cards = [
         {
         title: "Chimpanzini Bananini",
         rarity: "epic",
-        image: './images/banana guy.png',
+        image: 'images/banana guy.png',
         desc: "He walks and runs like this btw. He's completely trappe in the banana, he can't get out",
         attributes: {
             strength: 10,
@@ -91,7 +91,7 @@ export const cards = [
           {
         title: "Job Job Job Sahur",
         rarity: "mythic",
-        image: './images/job-sahur.png',
+        image: 'images/job-sahur.png',
         desc: "forces people to get a job when he hits them with the bat",
         attributes: {
             strength: 100000000,
@@ -102,7 +102,7 @@ export const cards = [
            {
         title: "Orcalero Orcala",
         rarity: "legendary",
-        image: './images/orca.png',
+        image: 'images/orca.png',
         desc: "the same thing as the shark but its an orca now",
         attributes: {
             strength: 150,
@@ -113,7 +113,7 @@ export const cards = [
            {
         title: "Tah Tah Tah Sahur",
         rarity: "rare",
-        image: './images/coffee.png',
+        image: 'images/coffee.png',
         desc: "tung tung tung sahur but he can make coffe now for some reason",
         attributes: {
             strength: 15,
@@ -124,7 +124,7 @@ export const cards = [
            {
         title: "Flahura",
         rarity: "common",
-        image: './images/bird2.0.png',
+        image: 'images/bird2.0.png',
         desc: "idk bro",
         attributes: {
             strength: 8,
@@ -135,7 +135,7 @@ export const cards = [
            {
         title: "Trippi Troppa Troppa Trippa",
         rarity: "epic",
-        image: './images/cat.png',
+        image: 'images/cat.png',
         desc: "Shrimp cat",
         attributes: {
             strength: 32,
@@ -146,7 +146,7 @@ export const cards = [
            {
         title: "Odin Din Din Dun",
         rarity: "mythic",
-        image: './images/bigorange.png',
+        image: 'images/bigorange.png',
         desc: "orange",
         attributes: {
             strength: 67,
@@ -157,7 +157,7 @@ export const cards = [
            {
         title: "Gamgamgamgam",
         rarity: "rare",
-        image: './images/orange.png',
+        image: 'images/orange.png',
         desc: "The same thing as the orange but its a salt shaker",
         attributes: {
             strength: 10,
@@ -168,7 +168,7 @@ export const cards = [
             {
         title: "huh",
         rarity: "huh",
-        image: './images/huh.png',
+        image: 'images/huh.png',
         desc: "If you figure it out a secret unlocks",
         attributes: {
             strength: 41,

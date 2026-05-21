@@ -4,7 +4,6 @@ import { createDraggable } from "animejs"
 import { animate } from "animejs"
 
 
-
 function render(card, container, index) {
   const cardElement = document.createElement("div");
 

@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const track = document.getElementById("track");
 
   if (!track) {
-    console.error("No #track found 😭");
+    console.error("No #track found ");
     return;
   }
 

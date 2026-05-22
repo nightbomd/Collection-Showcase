@@ -4,6 +4,7 @@ export const cards = [
         rarity: "divine-intervention",
         image: 'images/tung.png',
         desc: "He gon get u",
+        isOriginal: true,
         attributes: {
             strength: 9999999,
             intelligence: 9999999,
@@ -15,6 +16,7 @@ export const cards = [
         rarity: "rare",
         image: 'images/Ballerina Capuccina.png',
         desc: "She's a ballerina who is also a cuppicina so shes a cup.",
+        isOriginal: true,
         attributes: {
             strength: 12,
             intelligence: 15,
@@ -26,6 +28,7 @@ export const cards = [
         rarity: "epic",
         image: 'images/Tralelo Tralala.png',
         desc: "Shark with blue shoes. He flys in the ocean like he has nothing to lose",
+        isOriginal: true,
         attributes: {
             strength: 23,
             intelligence: 5,
@@ -37,6 +40,7 @@ export const cards = [
         rarity: "legendary",
         image: 'images/BC.png',
         desc: "Airplane crocodile, was in the vietnam war",
+        isOriginal: true,
         attributes: {
             strength: 48,
             intelligence: 12,
@@ -48,6 +52,7 @@ export const cards = [
         rarity: "mythic",
         image: 'images/Capuccino Assasino.png',
         desc: "a Capuccino who is an assasin",
+        isOriginal: false,
         attributes: {
             strength: 128,
             intelligence: 5,
@@ -59,6 +64,7 @@ export const cards = [
         rarity: "common",
         image: 'images/Li li li la.png',
         desc: "idk bro",
+        isOriginal: true,
         attributes: {
             strength: 4,
             intelligence: 8,
@@ -70,6 +76,7 @@ export const cards = [
         rarity: "rare",
         image: 'images/duck.png',
         desc: "Think of bombordillo crocodilo but it's basically his baby cousin that's it",
+         isOriginal: false,
         attributes: {
             strength: 10,
             intelligence: 8,
@@ -82,6 +89,7 @@ export const cards = [
         rarity: "epic",
         image: 'images/banana guy.png',
         desc: "He walks and runs like this btw. He's completely trappe in the banana, he can't get out",
+         isOriginal: false,
         attributes: {
             strength: 10,
             intelligence: 32,
@@ -93,6 +101,7 @@ export const cards = [
         rarity: "mythic",
         image: 'images/job-sahur.png',
         desc: "forces people to get a job when he hits them with the bat",
+         isOriginal: false,
         attributes: {
             strength: 100000000,
             intelligence: 0,
@@ -104,6 +113,7 @@ export const cards = [
         rarity: "legendary",
         image: 'images/orca.png',
         desc: "the same thing as the shark but its an orca now",
+         isOriginal: false,
         attributes: {
             strength: 150,
             intelligence: 8,
@@ -115,6 +125,7 @@ export const cards = [
         rarity: "rare",
         image: 'images/coffee.png',
         desc: "tung tung tung sahur but he can make coffe now for some reason",
+         isOriginal: false,
         attributes: {
             strength: 15,
             intelligence: 8,
@@ -125,6 +136,7 @@ export const cards = [
         title: "Flahura",
         rarity: "common",
         image: 'images/bird2.0.png',
+         isOriginal: false,
         desc: "idk bro",
         attributes: {
             strength: 8,
@@ -137,6 +149,7 @@ export const cards = [
         rarity: "epic",
         image: 'images/cat.png',
         desc: "Shrimp cat",
+         isOriginal: false,
         attributes: {
             strength: 32,
             intelligence: 32,
@@ -148,6 +161,7 @@ export const cards = [
         rarity: "mythic",
         image: 'images/bigorange.png',
         desc: "orange",
+         isOriginal: false,
         attributes: {
             strength: 67,
             intelligence: 67,
@@ -159,6 +173,7 @@ export const cards = [
         rarity: "rare",
         image: 'images/orange.png',
         desc: "The same thing as the orange but its a salt shaker",
+         isOriginal: false,
         attributes: {
             strength: 10,
             intelligence: 8,
@@ -170,6 +185,7 @@ export const cards = [
         rarity: "huh",
         image: 'images/huh.png',
         desc: "If you figure it out a secret unlocks",
+         isOriginal: false,
         attributes: {
             strength: 41,
             intelligence: 69,

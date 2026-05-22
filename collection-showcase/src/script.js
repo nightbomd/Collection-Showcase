@@ -2,7 +2,35 @@
 import { cards } from "./cards.js";
 import { createDraggable } from "animejs"
 import { animate } from "animejs"
+document.addEventListener("DOMContentLoaded", () => {
+  const navItems = document.querySelectorAll(".nav-animate");
+  console.log("nav items:", navItems.length, "on", window.location.href);
 
+  navItems.forEach(item => {
+    const svg = item.querySelector("img");
+    if (!svg) return;
+
+    let spinAnimation;
+
+    item.addEventListener("mouseenter", () => {
+      spinAnimation = animate(svg, {
+        rotate: 360,
+        duration: 1000,
+        loop: true,
+        ease: "linear",
+      });
+    });
+
+    item.addEventListener("mouseleave", () => {
+      spinAnimation?.pause();
+      animate(svg, {
+        rotate: 0,
+        duration: 400,
+        ease: "outExpo",
+      });
+    });
+  });
+});
 
 function render(card, container, index) {
   const cardElement = document.createElement("div");
@@ -57,6 +85,7 @@ renderContainer.innerHTML = `
         data-title="${card.title.toLowerCase()}"
       >
         <div class="card custom-card col-12 rarity-${card.rarity} fadeInUpAnimate">
+        <p>${card.isOriginal ? `<span class="original">Original</span>` : ""}</p>
           <img src="${card.image}" class="card-img-top" />
           <div class="card-body text-center">
             <h5 class="mb-3">${card.title}</h5>
@@ -133,32 +162,7 @@ renderContainer.addEventListener("click", (event) => {
 });
 
 
-const navItems = document.querySelectorAll(".nav-animate");
-console.log("nav items:", document.querySelectorAll(".nav-animate").length);
-navItems.forEach(item => {
-  const svg = item.querySelector("img");
 
-  let spinAnimation;
-
-  item.addEventListener("mouseenter", () => {
-    spinAnimation = animate(svg, {
-      rotate: 360,
-      duration: 1000,
-      loop: true,
-      ease: "linear",
-    });
-  });
-
-  item.addEventListener("mouseleave", () => {
-    spinAnimation?.pause();
-
-    animate(svg, {
-      rotate: 0,
-      duration: 400,
-      ease: "outExpo",
-    });
-  });
-});
 
 
 

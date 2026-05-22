@@ -1,6 +1,5 @@
-import { animate } from "animejs";
-import { createDraggable } from "animejs";
-import { Spring } from "animejs";
+import { animate, stagger, splitText } from "animejs";
+
 
 window.addEventListener("DOMContentLoaded", () => {
   const animatedElements = document.querySelectorAll(".fadeInUpAnimate");
@@ -22,6 +21,25 @@ window.addEventListener("DOMContentLoaded", () => {
   }, { threshold: 0.1 });
 
   animatedElements.forEach(el => observer.observe(el));
+
+  const { chars } = splitText('h2', { words: false, chars: true });
+
+animate(chars, {
+ 
+  y: [
+    { to: '-2.75rem', ease: 'outExpo', duration: 600 },
+    { to: 0, ease: 'outBounce', duration: 800, delay: 100 }
+  ],
+ 
+  rotate: {
+    from: '-1turn',
+    delay: 0
+  },
+  delay: stagger(50),
+  ease: 'inOutCirc',
+  loopDelay: 1000,
+  loop: true
+});
 });
 
 const track = document.querySelector(".track");
@@ -48,7 +66,7 @@ track.addEventListener("mouseout", () => {
 const heroImg = document.getElementById("hero-img");
 
 function animateSelectionBar() {
-    const images = ["/images/thibg.png", "/images/heroimg2.png", "/images/heroimg3.png"];
+    const images = ["./images/thibg.png", "./images/heroimg2.png", "./images/heroimg3.png"];
 
     const dots = document.querySelectorAll(".dot");
 

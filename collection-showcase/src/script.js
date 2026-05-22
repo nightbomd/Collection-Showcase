@@ -2,15 +2,43 @@
 import { cards } from "./cards.js";
 import { createDraggable } from "animejs"
 import { animate } from "animejs"
+document.addEventListener("DOMContentLoaded", () => {
+  const navItems = document.querySelectorAll(".nav-animate");
+  console.log("nav items:", navItems.length, "on", window.location.href);
 
+  navItems.forEach(item => {
+    const svg = item.querySelector("img");
+    if (!svg) return;
 
+    let spinAnimation;
+
+    item.addEventListener("mouseenter", () => {
+      spinAnimation = animate(svg, {
+        rotate: 360,
+        duration: 1000,
+        loop: true,
+        ease: "linear",
+      });
+    });
+
+    item.addEventListener("mouseleave", () => {
+      spinAnimation?.pause();
+      animate(svg, {
+        rotate: 0,
+        duration: 400,
+        ease: "outExpo",
+      });
+    });
+  });
+});
 
 function render(card, container, index) {
   const cardElement = document.createElement("div");
 
   cardElement.dataset.index = index;
 
-  cardElement.classList.add("fadeInUpAnimate");
+
+  cardElement.classList.add("fadeInUpAnimate", "cardElement");
   cardElement.innerHTML = `
             <div class="card custom-card  rarity-${card.rarity}">
                 <img src="${card.image}" />
@@ -28,6 +56,7 @@ function render(card, container, index) {
   });
 
   container.appendChild(cardElement);
+
 }
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -50,10 +79,13 @@ renderContainer.innerHTML = `
     ${cards.map((card, index) =>
   `
       <div 
-        class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center"
+        class="cardElement col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center"
         data-index="${index}"
+        data-rarity="${card.rarity}"
+        data-title="${card.title.toLowerCase()}"
       >
         <div class="card custom-card col-12 rarity-${card.rarity} fadeInUpAnimate">
+        <p>${card.isOriginal ? `<span class="original">Original</span>` : ""}</p>
           <img src="${card.image}" class="card-img-top" />
           <div class="card-body text-center">
             <h5 class="mb-3">${card.title}</h5>
@@ -130,30 +162,92 @@ renderContainer.addEventListener("click", (event) => {
 });
 
 
-const navItems = document.querySelectorAll(".nav-animate");
-console.log("nav items:", document.querySelectorAll(".nav-animate").length);
-navItems.forEach(item => {
-  const svg = item.querySelector("img");
 
-  let spinAnimation;
 
-  item.addEventListener("mouseenter", () => {
-    spinAnimation = animate(svg, {
-      rotate: 360,
-      duration: 1000,
-      loop: true,
-      ease: "linear",
+
+
+function filter(input) {
+
+  const cardElements = document.querySelectorAll(".cardElement");
+
+  // remove old clones
+  document.querySelectorAll(".huh-clone").forEach(el => el.remove());
+
+  // SPECIAL HUH MODE
+  if (input === "huh") {
+
+    const renderRow = document.querySelector("#render .row");
+
+    cardElements.forEach(card => {
+
+      if (card.dataset.rarity === "huh") {
+
+        card.classList.remove("hidden");
+
+        for (let i = 0; i < 1000; i++) {
+
+          const clone = card.cloneNode(true);
+
+          clone.classList.add("huh-clone");
+
+          renderRow.appendChild(clone);
+        }
+
+      } else {
+        card.classList.add("hidden");
+      }
+
     });
+
+    return;
+  }
+
+  // NORMAL FILTERING
+  cardElements.forEach(card => {
+
+    if (
+      input === "all" ||
+      card.dataset.rarity === input.toLowerCase()
+    ) {
+      card.classList.remove("hidden");
+    } else {
+      card.classList.add("hidden");
+    }
+
   });
 
-  item.addEventListener("mouseleave", () => {
-    spinAnimation?.pause();
+}
+const selected = document.querySelector(".selected");
+const options = document.querySelector(".options");
 
-    animate(svg, {
-      rotate: 0,
-      duration: 400,
-      ease: "outExpo",
-    });
-  });
+selected.addEventListener("click", () => {
+  options.classList.toggle("hidden");
 });
 
+document.querySelectorAll(".option").forEach(option => {
+
+  option.addEventListener("click", () => {
+
+    selected.textContent = option.textContent;
+
+    options.classList.add("hidden");
+
+    filter(option.dataset.value);
+
+  });
+
+});
+document.getElementById("keyword-input").addEventListener("input", (event) => {
+  const keyword = event.target.value.toLowerCase();
+  const cardElements = document.querySelectorAll(".cardElement");
+
+  cardElements.forEach(card => {
+    const title = card.dataset.title.toLowerCase();
+
+    if (title.includes(keyword)) {
+      card.classList.remove("hidden");
+    } else {
+      card.classList.add("hidden");
+    }
+  });
+});
